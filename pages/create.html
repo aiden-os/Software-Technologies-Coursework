@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="en" class="h-100">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Ken cameron">
+    <title>Training Record: Create Class</title>
+
+    <!-- Bootstrap core CSS -->
+<script src="/js/update.js"></script>
+<link href="/css/bootstrap.min.css" rel="stylesheet">
+<link href="/css/time.css" rel="stylesheet">
+</head>
+<body class="d-flex flex-column h-100">
+<main role="main" class="flex-shrink-0">
+  <div class="container">
+    <div class="container-fluid">
+      <div class="row mb-3">
+        <div class="col-10">
+          <h1>Training Record: Create Class</h1>
+        </div>
+        <div class="col text-end">
+          <button type="submit" class="btn btn-primary btn-block" onClick="window.location.href='/menu.html';"><h2>&nbsp;...&nbsp;</h2></button>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-10">
+        <div id="message" style="color:red;"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container border">
+    <div id="summarycontainer" class="container-fluid">
+
+      <div class="row mt-3">
+        <div class="col-8">
+          <h2><i>Specify When</i></h2>
+        </div>
+        <div class="col-4 text-end">
+          <button type="submit" class="btn btn-primary btn-block" onClick="command_create_class();"><h2>Create</h2></button>
+        </div>
+      </div>
+
+      <div class="row mt-3">
+        <div class="col-3">
+          <label>Date:</label>
+        </div>
+        <div class="col-2">
+          <select class="form-control" id="ofDay">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="10">10</option>
+          <option value="11">11</option>
+          <option value="12">12</option>
+          <option value="13">13</option>
+          <option value="14">14</option>
+          <option value="15">15</option>
+          <option value="16">16</option>
+          <option value="17">17</option>
+          <option value="18">18</option>
+          <option value="19">19</option>
+          <option value="20">20</option>
+          <option value="21">21</option>
+          <option value="22">22</option>
+          <option value="23">23</option>
+          <option value="24">24</option>
+          <option value="25">25</option>
+          <option value="26">26</option>
+          <option value="27">27</option>
+          <option value="28">28</option>
+          <option value="29">29</option>
+          <option value="30">30</option>
+          <option value="31">31</option>
+          </select>
+        </div>
+        <div class="col-4">
+          <select class="form-control" id="ofMonth">
+          <option value="1">January</option>
+          <option value="2">February</option>
+          <option value="3">March</option>
+          <option value="4">April</option>
+          <option value="5">May</option>
+          <option value="6">June</option>
+          <option value="7">July</option>
+          <option value="8">August</option>
+          <option value="9">September</option>
+          <option value="10">October</option>
+          <option value="11">November</option>
+          <option value="12">December</option>
+          </select>
+        </div>
+        <div class="col-2">
+          <select class="form-control" id="ofYear">
+          <option value="2022">2022</option>
+          <option value="2023">2023</option>
+          <option value="2024">2024</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="row mt-3">
+        <div class="col-3">
+          <label>Time:</label>
+        </div>
+        <div class="col-2">
+          <select class="form-control" id="ofHour">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="10">10</option>
+          <option value="11">11</option>
+          <option value="12">12</option>
+          <option value="13">13</option>
+          <option value="14">14</option>
+          <option value="15">15</option>
+          <option value="16">16</option>
+          <option value="17">17</option>
+          <option value="18">18</option>
+          <option value="19">19</option>
+          <option value="20">20</option>
+          <option value="21">21</option>
+          <option value="22">22</option>
+          <option value="23">23</option>
+
+          </select>
+        </div>
+        <div class="col-1">:</div>
+        <div class="col-2">
+          <select class="form-control" id="ofMinute">
+          <option value="0">00</option>
+          <option value="10">10</option>
+          <option value="20">20</option>
+          <option value="30">30</option>
+          <option value="40">40</option>
+          <option value="50">50</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="row mt-3">
+        <div class="col-3">
+          <label>Note:</label>
+        </div>
+        <div class="col-8">
+		<div class="input-group">
+  <input class="form-control" aria-label="With textarea" id="ofNote"></input>
+</div>
+        </div>
+      </div>
+
+      <div class="row mt-3">
+        <div class="col-3">
+          <label>Max Class Size</label>
+        </div>
+        <div class="col-2">
+          <select class="form-control" id="ofMax">
+          <option value="6">6</option>
+          <option value="5">5</option>
+          <option value="4">4</option>
+          <option value="3">3</option>
+          <option value="2">2</option>
+          <option value="1">1</option>
+          </select>
+        </div>
+      </div>
+
+    </div>
+    <div>&nbsp;</div>
+  </div>
+</main>
+
+<footer class="footer mt-auto py-3">
+  <div class="container">
+<div style="text-align:center">(C) Ken Cameron 2022, University of Bath. All rights reserved.</div>
+  </div>
+</footer>
+</body>
+</html>
